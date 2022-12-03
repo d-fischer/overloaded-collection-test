@@ -1,0 +1,21 @@
+{
+  "name": "selector",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.5",
+    "@babel/node": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "babel-plugin-transform-operator-overloading": "npm:@littledan/plugin-transform-operator-overloading",
+    "patch-package": "^6.5.0",
+    "postinstall-postinstall": "^2.1.0"
+  },
+  "dependencies": {
+    "@littledan/operator-overloading-shim": "^0.0.4"
+  },
+  "scripts": {
+    "postinstall": "patch-package"
+  }
+}

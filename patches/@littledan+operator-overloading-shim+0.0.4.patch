@@ -1,0 +1,22 @@
+diff --git a/node_modules/@littledan/operator-overloading-shim/build/shim.js b/node_modules/@littledan/operator-overloading-shim/build/shim.js
+index 82c5152..a9302e7 100644
+--- a/node_modules/@littledan/operator-overloading-shim/build/shim.js
++++ b/node_modules/@littledan/operator-overloading-shim/build/shim.js
+@@ -194,7 +194,7 @@ function partitionTables(tables) {
+         for (var _i = 0; _i < _arr.length; _i++) {
+           var key = _arr[_i];
+ 
+-          if (!leftSet.OpenOperators.has(key)) {
++          if (!leftSet.OpenOperators.includes(key)) {
+             throw new TypeError("the operator ".concat(key, " may not be overloaded on the provided type"));
+           }
+         } // "Backwards" because this new operator type is on the right
+@@ -218,7 +218,7 @@ function partitionTables(tables) {
+         for (var _i2 = 0; _i2 < _arr2.length; _i2++) {
+           var _key = _arr2[_i2];
+ 
+-          if (!rightSet.OpenOperators.has(_key)) {
++          if (!rightSet.OpenOperators.includes(_key)) {
+             throw new TypeError("the operator ".concat(_key, " may not be overloaded on the provided type"));
+           }
+         }

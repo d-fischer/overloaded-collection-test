@@ -1,0 +1,13 @@
+diff --git a/node_modules/babel-plugin-transform-operator-overloading/build/plugin.js b/node_modules/babel-plugin-transform-operator-overloading/build/plugin.js
+index 06dd72e..7146d4c 100644
+--- a/node_modules/babel-plugin-transform-operator-overloading/build/plugin.js
++++ b/node_modules/babel-plugin-transform-operator-overloading/build/plugin.js
+@@ -93,7 +93,7 @@ var visitBlockStatementLike = {
+     path.unshiftContainer('body', prelude);
+   },
+   exit: function exit(path) {
+-    if (this.peek().path === path) {
++    if (this.peek()?.path === path) {
+       this.stack.pop();
+       if (this.inactive()) this.shim = undefined;
+     }
